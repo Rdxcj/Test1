@@ -16,11 +16,11 @@ jobs:
       run: |
          sudo docker ps
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag testghdedzzdfg:123
+      run: docker build . --file Dockerfile --tag testghh:latest
   run_tests:
     needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Run Docker file
       run: |
-           docker run testghdedzzdfg:123 python3 main.py
+           docker run testghh:latest python3 main.py
